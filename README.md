@@ -8,7 +8,7 @@ analytics, customer segmentation using machine learning, and
 predictive sales forecasting to deliver actionable business insights.
 
 ## Tools & Technologies
--- SQL (SQLite) — data extraction and validation
+-- SQL (SQLite) -data extraction and validation
 - Python (Pandas, Matplotlib, Scikit-learn, Prophet) — analysis and ML
 - Power BI — 4-page interactive dashboard
 
