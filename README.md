@@ -8,8 +8,9 @@ analytics, customer segmentation using machine learning, and
 predictive sales forecasting to deliver actionable business insights.
 
 ## Tools & Technologies
-- Python (Pandas, Matplotlib, Scikit-learn, Prophet)
-- Power BI — 4-level interactive dashboard
+-- SQL (SQLite) — data extraction and validation
+- Python (Pandas, Matplotlib, Scikit-learn, Prophet) — analysis and ML
+- Power BI — 4-page interactive dashboard
 
 ## Dataset
 - Source: Kaggle — Superstore Dataset
@@ -19,6 +20,80 @@ predictive sales forecasting to deliver actionable business insights.
 
 ---
 
+
+### Pipeline
+Raw Data → SQLite Database → SQL Queries → 
+Python Analysis → Power BI Dashboard
+## Part 0 — SQL Layer (SQLite)
+### Why SQL First
+In real-world analytics, data lives in databases before 
+it reaches analysts. This project replicates that workflow 
+by loading the Superstore dataset into a SQLite database 
+and answering all 6 business questions through SQL before 
+validating with Python.
+
+### Business Questions Answered in SQL
+
+**1. Business Overview**
+- Total Revenue: $2.3M | Total Profit: $286K | 
+  Margin: 12.47%
+
+**2. Category Performance**
+- Technology leads at 17.39% margin
+- Furniture trails at only 2.49% margin
+
+**3. Sub-Category Performance**
+- Labels (44.4%), Paper (43.4%) highest margin
+- Tables (-8.56%), Bookcases (-3.02%) loss-making
+
+**4. Discount Impact**
+- Average profit turns negative beyond 20% discount
+- 50% discount orders lose $310 per order on average
+
+**5. Regional Performance**
+- West leads at 14.94% | Central weakest at 7.92%
+
+**6. Yearly Trend**
+- Revenue grew from $484K (2014) to $733K (2017)
+- Margin improved 2014-2016 then declined in 2017
+
+### Advanced Query — Top 5 Most Profitable Customers
+
+| Rank | Customer ID | Total Profit |
+|------|-------------|--------------|
+| 1 | TC-20980 | $8,981 |
+| 2 | RB-19360 | $6,976 |
+| 3 | SC-20095 | $5,757 |
+| 4 | HL-15040 | $5,622 |
+| 5 | AB-10105 | $5,444 |
+
+### SQL Validation
+All SQL results confirmed matching Python analysis — 
+proving consistency across tools and validating 
+analytical approach.
+
+### Tools
+- SQLite (via Python sqlite3 library)
+- pandas read_sql_query for result display
+- Jupyter Notebook for documentation
+```
+
+---
+
+**Also update your CV skills section:**
+
+Under Languages & Tools add:
+```
+SQLite
+```
+
+And update the project title line from:
+```
+Python | Power BI | Scikit-learn | Prophet
+```
+To:
+```
+Python | SQL | Power BI | Scikit-learn | Prophet
 ## Part 1 — Sales Performance Analysis
 
 ### Business Questions Answered
